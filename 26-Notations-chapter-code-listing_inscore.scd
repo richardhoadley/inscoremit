@@ -6,7 +6,6 @@ Code compiled for The SuperCollider Book, 2nd Edn, MIT Press
 Tom Hall, Newton Armstrong, Richard Hoadley
 
 CODE LISTING
-
 */
 
 
@@ -26,12 +25,10 @@ CODE LISTING
 
 // assumes INScoreViewer listening for OSC on port 7000
 ~addr = NetAddr.new("localhost", 7000);
-~addr = NetAddr.new("10.0.1.49", 7000);
 ~addr.sendMsg("/ITL/scene/score0", \set, \gmn, "[ d ]");
 
 // assumes INScoreViewer listening for OSC on hostname "127.0.0.1", port 7000
 ~scene= INScoreSceneMIT.new;
-~scene= INScoreSceneMIT.new("10.0.1.49", 7000);
 
 ~scene.note(pitch: \c);
 
@@ -66,7 +63,6 @@ g = ~scene.guido; // otherwise: g = SimpleGuidoMIT.new;
 // Figure 26.6: Dynamic CPWN using a function to generate an algorithmic chord sequence.
 
 ~scene= INScoreSceneMIT.new; // new class instance as needed
-~scene= INScoreSceneMIT.new("10.0.1.49"); // new class instance as needed
 
 (
 ~randomChordsFn = {
