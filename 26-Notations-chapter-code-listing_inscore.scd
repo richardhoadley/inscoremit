@@ -230,7 +230,6 @@ Routine.new({
 			Routine.new({
 				4.do({
 					newMel = guido.note(*[["b&", "a", "c", "b"], ["", "1"], [2, 4, 8]].collect{|i| i.choose});
-					// newMel.postln;
 					melodyRH[i] = melodyRH[i] ++ newMel;
 					~scene.note(pitch: melodyHeader[i] ++ melodyRH[i], componentNum: i);
 					[0.25, 0.33, 0.5, 0.6].choose.wait
@@ -245,12 +244,12 @@ Routine.new({
 		});
 
 		(randIter*4).do({|i|
-			~scene.rect(xSize: rrand(0.01, 0.3), ySize: rrand(0.01, 0.1), angle: 0, componentNum: i); // rect
+			~scene.rect(xSize: rrand(0.01, 0.3), ySize: rrand(0.01, 0.1), angle: 0, componentNum: i);
 			~scene.move(x: rand2(screenRatio), y: rand2(1.0), componentNum: i, component: "rect");
 			~scene.color(color: [200, 200, rrand(200, 255), 255.rand], componentNum: i, component: "rect");
 			Routine.new({200.do({~scene.drotate(8.rand, componentNum: i, component: "rect"); 0.04.wait})}).play;
 
-			~scene.line(x: rand2(0.4), y: rand2(0.4), angle: 360.rand, widthVal: 0.5, componentNum: i); // line
+			~scene.line(x: rand2(0.4), y: rand2(0.4), angle: 360.rand, widthVal: 0.5, componentNum: i);
 			~scene.move(x: starPos[0], y: starPos[1], componentNum: i, component: "line");
 			~scene.color(color: [0, 0, 0, 100], componentNum: i, component: "line");
 			Routine.new({200.do({
@@ -258,9 +257,6 @@ Routine.new({
 				0.04.wait
 			});
 			}).play;
-
-
-
 
 			~scene.ellipse(width: rrand(0.01, 0.08), angle: 360.rand, componentNum: i); // ellipse
 			~scene.move(x: rand2(screenRatio), y: rand2(1.0), componentNum: i, component: "ellipse");
@@ -273,7 +269,6 @@ Routine.new({
 		});
 		waitTime.wait;
 		numScores.do({|i| ~scene.deleteComponent(component: "score", componentNum: i)});
-		// (randIter*4).do({|i| ~scene.deleteComponent( component: "line", componentNum: i)});
 	});
 	~scene.endFullScreen;
 	~scene.windowWidth(1);
