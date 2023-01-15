@@ -109,7 +109,7 @@ INScoreSceneMIT {
 		if(thisProcess.platform.name == \osx){
 			"osascript -e 'tell application \"INScoreViewer\"' -e 'activate' -e 'end tell'".unixCmd;
 		}{
-			"Open Script Architecture (OSA) only applies to Apple mapOS".postln;
+			"Open Script Architecture (OSA) only applies to Apple macOS".postln;
 		};
 		^this
 	}
