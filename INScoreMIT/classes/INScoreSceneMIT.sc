@@ -13,7 +13,6 @@ Version compiled for The SuperCollider Book, 2nd Edn, MIT Press
 NB This version of the class accommodates only a small subsets of the OSC commands already present in INScore. The class therefore provides a template for others to create their own commands/implementations,
 
 https://inscoredoc.grame.fr/refs/1-introduction/
-ellipse
 
 */
 
