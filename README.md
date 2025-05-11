@@ -3,6 +3,7 @@
 Code for[ _The SuperCollider Book_](https://mitpress.mit.edu/9780262049702/the-supercollider-book/), 2nd Edition, published by MIT Press in April 2025.
 
 **Chapter 26 ‘Notations and Score-making’**
+
 Tom Hall, Newton Armstrong, and Richard Hoadley
 
 This code is for chapter section: ‘26.3 INScore’.
